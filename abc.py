@@ -20,7 +20,7 @@ while True:
 			msg['From'] = 'vasudv0912@gmail.com'
 			msg['To'] = recipients
 			server=smtplib.SMTP_SSL("smtp.gmail.com" , 465)
-			server.login("vasudv0912@gmail.com","vasu9@0609")
+			server.login("vasudv0912@gmail.com","vasu9@0906")
 			server.sendmail('vasudv0912@gmail.com',recipients, msg.as_string())
 			server.quit()
 	except Exception as e: 
