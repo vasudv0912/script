@@ -24,5 +24,5 @@ while True:
 			server.sendmail('vasudv0912@gmail.com',recipients, msg.as_string())
 			server.quit()
 	except Exception as e: 
-		print(str(e)+" will try after 3 sec")
+		print(str(e)+" will try after 3 sec // "+ str(time.time()*1000))
 		time.sleep(3)
