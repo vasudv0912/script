@@ -3,9 +3,10 @@ import json
 import smtplib
 import time
 from email.mime.text import MIMEText
-server=smtplib.SMTP_SSL("smtp.gmail.com" , 465)
 currenttitle0=""
+recipients= ", ".join(['jsmith503@gmail.com','singhakash414@gmail.com'])
 print("Script started...")
+
 while True:
 	try: 
 		d = requests.get2dict("https://www.binance.com/gateway-api/v3/public/market/notice/get?page=1&rows=1")
@@ -17,13 +18,11 @@ while True:
 			msg = MIMEText("Title:- "+str(currenttitle0)+" // Publish Time:- "+str(publishtimestramp)+"// Current Time:-"+ str(time.time()*1000))
 			msg['Subject'] = "Binance Update: " + str(currenttitle0)
 			msg['From'] = 'vasudv0912@gmail.com'
-			recipients= ['jsmith503@gmail.com','singhakash414@gmail.com']
-			msg['To'] = ", ".join(recipients)
+			msg['To'] = recipients
+			server=smtplib.SMTP_SSL("smtp.gmail.com" , 465)
 			server.login("vasudv0912@gmail.com","vasu9@0609")
 			server.sendmail('vasudv0912@gmail.com',recipients, msg.as_string())
 			server.quit()
 	except Exception as e: 
 		print(str(e)+" will try after 3 sec")
-		server.quit()
-		server.login("vasudv0912@gmail.com","vasu9@0609")
 		time.sleep(3)
