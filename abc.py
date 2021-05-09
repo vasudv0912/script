@@ -27,5 +27,5 @@ while True:
                             recipients, msg.as_string())
             server.quit()
     except Exception as e:
-        print(str(e)+" will try after 3 sec // " + str(time.time()*1000))
-        time.sleep(6)
+        print(str(e)+" will try after 10 sec // " + str(time.time()*1000))
+        time.sleep(10)
