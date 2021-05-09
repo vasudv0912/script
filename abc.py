@@ -26,7 +26,7 @@ while True:
             server.sendmail('vasudv0912@gmail.com',
                             recipients, msg.as_string())
             server.quit()
-        time.sleep(0.150)
+        time.sleep(0.100)
     except Exception as e:
         print(str(e)+" will try after 10 sec // " + str(time.time()*1000))
         time.sleep(10)
