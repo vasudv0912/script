@@ -18,7 +18,7 @@ while True:
             print(new_title, last_publish_id)
             msg = MIMEText("Title:- "+str(new_title)+" // Publish Time:- " +
                            str(json.loads(d[3]['data'])[0]['time'])+"// Current Time:-" + str(time.time()*1000))
-            msg['Subject'] = "TOKYO Binance Update: " + str(new_title)
+            msg['Subject'] = "Binance Update: " + str(new_title)
             msg['From'] = 'vasudv0912@gmail.com'
             msg['To'] = recipients
             server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
@@ -28,5 +28,5 @@ while True:
             server.quit()
         time.sleep(0.05)
     except Exception as e:
-        print(str(e)+" will try after 10 sec // " + str(time.time()*1000))
-        time.sleep(10)
+        print(str(e)+" will try after 4 sec // " + str(time.time()*1000))
+        time.sleep(4)
