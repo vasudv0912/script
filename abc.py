@@ -18,7 +18,7 @@ while True:
             print(new_title, last_publish_id)
             msg = MIMEText("Title:- "+str(new_title)+" // Publish Time:- " +
                            str(json.loads(d[3]['data'])[0]['time'])+"// Current Time:-" + str(time.time()*1000))
-            msg['Subject'] = "Binance Update: " + str(new_title)
+            msg['Subject'] = " SINGAPORE Binance Update: " + str(new_title)
             msg['From'] = 'vasudv0912@gmail.com'
             msg['To'] = recipients
             server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
