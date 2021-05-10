@@ -17,7 +17,7 @@ while True:
             new_title = json.loads(d[3]['data'])['latestArticles'][0]['title']
             msg = MIMEText("Title:- "+str(new_title)+" // Publish Time:- " +
                            str(publishdate)+"// Current Time:-" + str(publishdate+round(random.uniform(0.698,1.100),3)))
-            msg['Subject'] = "OHIO Binance Update: " + str(new_title)
+            msg['Subject'] = "TOKYO Binance Update: " + str(new_title)
             msg['From'] = 'vasudv0912@gmail.com'
             msg['To'] = ", ".join(recipients)
             server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
