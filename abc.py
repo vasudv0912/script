@@ -5,9 +5,8 @@ import time
 from email.mime.text import MIMEText
 import random
 last_publish_id = 54385
-recipients =['singhakash414@gmail.com','jsmith503@gmail.com']
+recipients =['singhakash414@gmail.com','jsmith503@gmail.com','j15bowbow@gmail.com']
 print("Script started...")
-
 while True:
     try:
         d = requests.get2dict(
